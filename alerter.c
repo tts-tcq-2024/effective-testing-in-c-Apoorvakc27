@@ -73,5 +73,6 @@ int main() {
     printtest();
     conversiontest();
     alerttest();
+    printf("All tests passed for alerter.c\n");
     return 0;
 }
