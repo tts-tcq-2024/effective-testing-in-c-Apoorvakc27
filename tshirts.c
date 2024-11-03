@@ -12,14 +12,21 @@ char size(int cms) {
     }
     return sizeName;
 }
+void runTests() {
+    // Test cases
+    assert(size(-1) == 'S'); // Should be Small (negative case)
+    assert(size(37) == 'S'); // Should be Small
+    assert(size(38) == 'S'); // Should be Small (boundary)
+    assert(size(39) == 'M'); // Should be Medium
+    assert(size(41) == 'M'); // Should be Medium (boundary)
+    assert(size(42) == 'L'); // Should be Large (boundary)
+    assert(size(44) == 'L'); // Should be Large
+    assert(size(100) == 'L'); // Should be Large
+
+    printf("All is well (maybe!)\n");
+}
 
 int main() {
-    assert(size(37) == 'S');
-    assert(size(40) == 'M');
-    assert(size(43) == 'L');
-    assert(size(38) == 'S');
-    assert(size(42) == 'M');
-    assert(size(-1) == 'S');
-    printf("All is well (maybe!)\n");
+    runTests();
     return 0;
 }
