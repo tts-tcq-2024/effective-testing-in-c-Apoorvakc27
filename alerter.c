@@ -45,14 +45,14 @@ void printtest(void)
     };
 
     // Test alert output
-    alertInCelcius(400.5); // should print "ALERT: Temperature is 204.7 celcius."
-    assert(strcmp(testbuffer, testarr[0]) == 0); // Check first alert output
+    alertInCelcius(400.5); 
+    assert(strcmp(testbuffer, testarr[0]) == 0); // Check  alert output
 
-    alertInCelcius(303.6); // should print "ALERT: Temperature is 150.9 celcius."
-    assert(strcmp(testbuffer, testarr[1]) == 0); // Check second alert output
+    alertInCelcius(303.6); 
+    assert(strcmp(testbuffer, testarr[1]) == 0); 
 
-    alertInCelcius(10); // should print "ALERT: Temperature is -12.2 celcius."
-    assert(strcmp(testbuffer, testarr[2]) == 0); // Check third alert output
+    alertInCelcius(10); 
+    assert(strcmp(testbuffer, testarr[2]) == 0); 
 }
 
 void alerttest(void)
